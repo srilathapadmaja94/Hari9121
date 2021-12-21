@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  
+ <style type="text/css">
+  body{
+    background-color:darksalmon;
+    color:black;
+    font-style: italic;
+  }
+  h1{
+    background-color:royalblue;
+    color:white;
+    font-style: italic;
+  }
+  th{
+    background-color:white;
+    color:green;
+    height:50%;
+    width: 50%;
+  }
+  td{
+    background-color:black;
+    color:white;
+    font-style: bold;
+  }
+  div{
+    background-color:white;
+    color:black;
+    height:50%;
+    width: 50%;
+  }
+ </style>
+
+{% extends'layout.html' %}
+{% block content %}
+<center>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <body>
+    <center><br><br>
+      <div>
+      <br><h1>List of Contacts</h1>
+      
+<table id="database" border="2" class="table table-dark" width=20%>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Mobile_Number</th>
+    </tr>
+  </thead>
+    	{%for Name,Mobile_Number in database.items() %}
+      {% if Name != None %}
+      <tr>
+      		<td>{{ Name }}</td>
+      		<td>{{ Mobile_Number }}</td>
+          </td>
+          </tr>
+      {% endif %}
+      {% endfor %}
+  </tbody>
+</div>
+</table>
+</center>
+{% endblock %}

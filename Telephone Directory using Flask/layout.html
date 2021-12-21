@@ -1,0 +1,17 @@
+<ul>
+<li> <a href="{{ url_for('add') }}" class="active">
+  
+      <i class="fas fa-home icon"></i><h4>Add</h4></a>
+  </li>
+  <li>
+    <a href="{{ url_for('display') }}" class="active">
+    <i class="fas fa-home icon"></i><h4>Display</h4></a>
+  </li>
+  <li>
+    <a href="{{ url_for('search') }}" class="active">
+      <i class="fas fa-home icon"></i><h4>Search</h4>
+    </a>
+  </li>
+</ul>
+{% block content %}
+{% endblock %}
