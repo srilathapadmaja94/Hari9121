@@ -61,8 +61,8 @@ def ministat():
 
 @app.route("/exit", methods=["GET", "POST"])
 def exit():
-	for username in database.keys():
-		pass
+	if username in database.keys():
+		break
 	return render_template("options.html",username=username)
 
 if __name__ == '__main__':
