@@ -1,0 +1,7 @@
+{% block img %}
+<img src="{{ url_for('static',filename='harry.gif') }}">
+{% endblock %}
+{% extends'base.html' %}
+{% block content %}
+<img src="{{ url_for('static',filename='try.gif') }}">
+{% endblock %}
