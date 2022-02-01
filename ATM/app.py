@@ -12,8 +12,8 @@ def index():
 	username = request.form.get('username')
 	password = request.form.get('password')
 
-	for i,j in database.items():
-		if username == i and password == j[0]:
+	for i,j in database.items():#j is the list of datbasevalues[j = ["1010","12345",[5000]]
+		if username == i and password == j[0]:#j[0] is the first position of list
 			return render_template('options.html',username=username)
 		#return render_template('loginfail.html', username=username)
 	return render_template("login.html")
