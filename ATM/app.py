@@ -3,7 +3,7 @@ import datetime
 
 app = Flask(__name__)
 global database,l,amount,x
-database={"Hari":["1010","12345",[5000]]}
+database={"Hari":["1010","12345",[5000]]}##{username:["pin","account number","amount"}
 l=[]
 
 @app.route("/",methods=["GET","POST"])
